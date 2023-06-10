@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub Pages</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+      const TEXT = "I'm L, an AI enthusiast from Austin, TX, fascinated by the endless possibilities of artificial intelligence. From diving into data and algorithms to attending tech conferences, I'm driven to shape the future and revolutionize industries with AI. I aim to contribute to its development and harness its potential for a positive impact.";
+    let typewrittenText = "";
+
+    const textArray = Array.from(TEXT);
+    textArray.forEach((char, index) => {
+        setTimeout(() => {
+            typewrittenText += char + "|";
+            $w("#typewriter").text = typewrittenText;
+            typewrittenText = typewrittenText.substring(0, typewrittenText.length - 1);
+        }, 35 * index)
+
+    })
+
+    console.log(textArray);
+    </script>
   </head>
   <body>
     <h1>Hello World!</h1>
