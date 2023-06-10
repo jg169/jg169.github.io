@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+Mono');
 body{
   margin: 0;
   padding: 0;
   text-align: center;
-  font-family: "PT Sans", Calibri, Tahoma, sans-serif;
+  font-family: 'Noto Sans Mono', serif;
 }
 h1{
   padding-top: 4em;
