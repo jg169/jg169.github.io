@@ -22,11 +22,19 @@
 
         .typewriter {
             overflow: hidden;
-            border-right: .15em solid black;
+            border-right: .15em solid transparent;
             white-space: nowrap;
             margin: 0;
             letter-spacing: .10em;
+            display: inline-block;
+        }
+
+        .typewriter.typing {
             animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        .typewriter.finished {
+            border-right-color: transparent;
         }
 
         @keyframes typing {
@@ -98,12 +106,34 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const elements = document.querySelectorAll('.typewriter');
-            elements.forEach((element, index) => {
-                element.style.animation = `typing 3.5s steps(40, end) ${index * 3.5}s forwards, blink-caret .75s step-end infinite`;
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            const elements = document.querySelectorAll('.typewriter:not(.typing):not(.finished)');
+            elements.forEach((element) => {
+                if (isElementInViewport(element)) {
+                    element.classList.add('typing');
+                    element.addEventListener('animationend', function() {
+                        this.classList.remove('typing');
+                        this.classList.add('finished');
+                    });
+                }
             });
-        });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('resize', handleScroll);
+        
+        // Trigger initial check
+        handleScroll();
     </script>
 </body>
 </html>
