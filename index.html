@@ -26,7 +26,7 @@
             white-space: nowrap;
             margin: 0;
             letter-spacing: .10em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end 2s;
         }
 
         @keyframes typing {
@@ -85,9 +85,9 @@
 
         <div class="content">
             <p class="typewriter">I'm J.</p>
-            <p class="typewriter">At the intersection of technology and innovation, I explore the frontiers of what's possible. My work spans across cutting-edge computer science and transformative business technologies.</p>
-            <p class="typewriter">I believe in harnessing the power of code to solve complex problems and drive meaningful change. From artificial intelligence to cloud computing, I'm passionate about leveraging technology to create impactful solutions.</p>
-            <p class="typewriter">My mission: To bridge the gap between technological advancement and practical business applications, paving the way for a more efficient and connected future.</p>
+            <p class="typewriter">At the intersection of technology and innovation, I explore the frontiers of what's possible. <br> My work spans across cutting-edge computer science and transformative business technologies.</p>
+            <p class="typewriter">I believe in harnessing the power of code to solve complex problems and drive meaningful change. <br> From artificial intelligence to cloud computing, I'm passionate about leveraging technology to create impactful solutions.</p>
+            <p class="typewriter">My mission: To bridge the gap between technological advancement and practical business applications, <br> paving the way for a more efficient and connected future.</p>
         </div>
 
         <div class="links">
@@ -101,7 +101,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             const elements = document.querySelectorAll('.typewriter');
             elements.forEach((element, index) => {
-                element.style.animation = `typing 3.5s steps(40, end) ${index * 3.5}s forwards, blink-caret .75s step-end infinite`;
+                element.style.animation = `typing 3.5s steps(40, end) ${index * 3.5}s forwards, blink-caret .75s step-end 2s`;
             });
         });
     </script>
