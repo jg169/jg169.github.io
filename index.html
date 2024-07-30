@@ -29,7 +29,25 @@
             overflow: hidden;
         }
 
-        .typewriter h1 {
+        .typewriter1 h1 {
+            overflow: hidden;
+            border-right: .15em solid black;
+            white-space: nowrap;
+            margin: 0;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: black; }
+        }
+        .typewriter2 h1 {
             overflow: hidden;
             border-right: .15em solid black;
             white-space: nowrap;
@@ -75,10 +93,10 @@
 </head>
 <body>
     <div class="container">
-        <div class="typewriter">
+        <div class="typewriter1">
             <h1 style="font-size: 100px">Hello</h1>
         </div>
-        <div class="typewriter">
+        <div class="typewriter2">
             <h1 style="font-size: 100px"><strong>World</strong></h1>
         </div>
 
