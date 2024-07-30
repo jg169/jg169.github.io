@@ -3,85 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J's Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <title>Your Name - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Space Grotesk', sans-serif;
+            font-family: 'Noto Sans Mono', monospace;
             margin: 0;
             padding: 0;
             background-color: white;
             color: black;
         }
+
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
+
         .typewriter {
-            overflow: hidden;
-            border-right: .15em solid black;
-            white-space: nowrap;
-            margin: 0;
-            letter-spacing: .10em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: black; }
-        }
-        .hero {
+            font-size: 4em;
             height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
-            padding-left: 10%;
+            overflow: hidden;
         }
-        .hero h1 {
-            font-size: 5em;
+
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid black;
+            white-space: nowrap;
             margin: 0;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
         }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: black; }
+        }
+
         .content {
             margin-top: 50px;
         }
+
         .content p {
             font-size: 1.2em;
             line-height: 1.6;
-            margin-bottom: 20px;
         }
-        .links {
+
+        .slogan {
+            font-style: italic;
+            font-size: 1.5em;
+            margin: 30px 0;
+        }
+
+        .resume {
             margin-top: 50px;
         }
-        .links a {
-            display: inline-block;
-            margin-right: 20px;
-            font-size: 1.2em;
-            color: black;
-            text-decoration: none;
+
+        .resume h2 {
             border-bottom: 1px solid black;
+            padding-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="hero">
-            <h1 class="typewriter">Hello<br>World.</h1>
+        <div class="typewriter">
+            <h1>Hello<br>
+            <strong>World</strong>.</h1>
         </div>
+
         <div class="content">
-            <p>I'm J.</p>
-            <p>At the intersection of technology and innovation, I explore the frontiers of what's possible. <br> My work spans across cutting-edge computer science and transformative business technologies.</p>
-            <p>I believe in harnessing the power of code to solve complex problems and drive meaningful change. <br> From artificial intelligence to cloud computing, I'm passionate about leveraging technology to create impactful solutions.</p>
-            <p>My mission: To bridge the gap between technological advancement and practical business applications, <br> paving the way for a more efficient and connected future.</p>
+            <p>At the intersection of computer science and business technology, we stand at the forefront of innovation. Our mission is to harness the power of cutting-edge technologies to drive transformative change in the business landscape.</p>
+
+            <p class="slogan">Empowering businesses through intelligent solutions.</p>
+
+            <p>In this rapidly evolving digital era, we believe in the synergy between robust computer science principles and strategic business applications. Our expertise lies in developing scalable, efficient, and innovative solutions that address complex business challenges.</p>
+
+            <p>From artificial intelligence and machine learning to cloud computing and data analytics, we leverage the latest advancements to create value and drive growth. Our multidisciplinary approach allows us to bridge the gap between technical possibilities and business realities.</p>
         </div>
-        <div class="links">
-            <a href="#">Resume</a>
-            <a href="#">Blog/Portfolio</a>
-            <a href="#">Research</a>
+
+        <div class="resume">
+            <h2>Sample Resume</h2>
+            <h3>John Doe</h3>
+            <p>Computer Scientist & Business Technologist</p>
+            <h4>Experience</h4>
+            <ul>
+                <li>Senior Software Engineer, TechCorp (2018-present)</li>
+                <li>Data Scientist, AnalyticsPro (2015-2018)</li>
+                <li>Business Intelligence Analyst, DataDriven Inc. (2013-2015)</li>
+            </ul>
+            <h4>Education</h4>
+            <ul>
+                <li>M.S. Computer Science, Tech University (2013)</li>
+                <li>B.S. Business Administration, Business College (2011)</li>
+            </ul>
+            <h4>Skills</h4>
+            <p>Python, Java, Machine Learning, Data Analysis, Cloud Computing, Agile Methodologies</p>
         </div>
     </div>
 </body>
