@@ -105,37 +105,6 @@
         </div>
     </div>
 
-    <script>
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-
-        function handleScroll() {
-            const elements = document.querySelectorAll('.typewriter:not(.typing):not(.finished)');
-            elements.forEach((element) => {
-                if (isElementInViewport(element)) {
-                    element.classList.add('typing', 'blinking');
-                    element.addEventListener('animationend', function(e) {
-                        if (e.animationName === 'typing') {
-                            this.classList.remove('typing', 'blinking');
-                            this.classList.add('finished');
-                        }
-                    });
-                }
-            });
-        }
-
-        window.addEventListener('scroll', handleScroll);
-        window.addEventListener('resize', handleScroll);
-        
-        // Trigger initial check
-        handleScroll();
-    </script>
+    
 </body>
 </html>
