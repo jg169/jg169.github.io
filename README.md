@@ -21,10 +21,7 @@ A retro terminal-style personal portfolio website
 - `contact` - Contact information
 - `links` - Social media and websites
 - `clear` - Clear terminal
-- `coffee` - Get virtual coffee
-- `joke` - Programming jokes
-- `matrix` - Enter the Matrix
-- And many more...
+- And many more... like get coffee, tell a joke, and enter the matrix
 
 
 ## Technologies Used
