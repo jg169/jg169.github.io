@@ -61,10 +61,10 @@ class TerminalPortfolio {
 
             // Special cases for some stocks
             let finalChange = change;
-            if (symbol === 'COFFEEFUEL') finalChange = (Math.random() * 500 + 200).toFixed(1);
+            if (symbol === 'BANKING ') finalChange = (Math.random() * 500 + 200).toFixed(1);
             if (symbol === 'STRESSLVL') finalChange = (Math.random() * 20).toFixed(1);
             if (symbol === 'DEBUGSKILL') finalChange = (Math.random() * 2).toFixed(1);
-            if (symbol === 'NYUGPA') finalChange = '3.85';
+            if (symbol === 'NYUGPA') finalChange = '3.867';
 
             const arrow = isUp ? '↑' : '↓';
             const colorClass = isUp ? 'up' : 'down';
@@ -458,7 +458,7 @@ Note: Click on any link to open in a new tab!
         const responses = [
             "You are jonathan, but more importantly, you're awesome! 🌟",
             "jonathan - A human who speaks fluent JavaScript and broken English",
-            "User: jonathan | Status: Caffeinated | Mood: Optimistic | Bugs: Probably many",
+            "User: jonathan | Status: Up | Mood: Optimistic | Bugs: Probably many",
             "jonathan - Professional code wrangler and coffee consumer"
         ];
         this.addOutput(responses[Math.floor(Math.random() * responses.length)]);
