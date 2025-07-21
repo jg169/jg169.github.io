@@ -1,15 +1,239 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+Mono');
-body{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding-top: 30px; /* Account for ticker height */
+}
+
+.terminal {
+  width: 90vw;
+  height: calc(85vh - 30px); /* Subtract ticker height */
+  background: #000;
+  border: 2px solid #00ff00;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.terminal-header {
+  background: #1a1a1a;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #00ff00;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.close { background: #ff5f56; }
+.minimize { background: #ffbd2e; }
+.maximize { background: #27ca3f; }
+
+.title {
+  color: #00ff00;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 20px;
+  color: #00ff00;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ascii-art {
+  color: #00ff00;
+  font-size: 8px;
+  line-height: 1;
   text-align: center;
-  font-family: 'Noto Sans Mono', serif;
+  margin-bottom: 20px;
+  white-space: pre;
 }
-h1{
-  padding-top: 4em;
+
+.output {
+  flex: 1;
+  margin-bottom: 20px;
 }
-p{
-  margin: 2em 0;
+
+.line {
+  margin: 10px 0;
+}
+
+.prompt {
+  color: #00ff00;
+  font-weight: bold;
+}
+
+.response {
+  margin-left: 20px;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+.comment {
+  color: #666;
+  font-style: italic;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#command-input {
+  background: transparent;
+  border: none;
+  color: #00ff00;
+  font-family: inherit;
+  font-size: inherit;
+  flex: 1;
+  outline: none;
+}
+
+#command-input::placeholder {
+  color: #444;
+}
+
+.link {
+  color: #00cccc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: #00ffff;
+}
+
+.typing {
+  border-right: 2px solid #00ff00;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.skill-bar {
+  background: #333;
+  height: 15px;
+  margin: 5px 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  background: linear-gradient(90deg, #00ff00, #00cc00);
+  height: 100%;
+  border-radius: 3px;
+  animation: loadBar 2s ease-in-out;
+}
+
+@keyframes loadBar {
+  from { width: 0%; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ticker-content {
+      font-size: 10px;
+  }
+
+  .ticker-container {
+      height: 25px;
+  }
+
+  body {
+      padding-top: 25px;
+  }
+
+  .terminal {
+      height: calc(90vh - 25px);
+  }
 }
 
 
+/* Scrollbar styling */
+.terminal-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.terminal-body::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+.ticker-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(90deg, #001100, #002200);
+  border-bottom: 1px solid #00ff00;
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.ticker-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-ticker 120s linear infinite;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #00ff00;
+}
+
+.ticker-item {
+  margin-right: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.ticker-item .up {
+  color: #00ff88;
+}
+
+.ticker-item .down {
+  color: #ff4444;
+}
+
+@keyframes scroll-ticker {
+  0% {
+      transform: translateX(100vw);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}

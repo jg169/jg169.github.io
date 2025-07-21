@@ -3,132 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Sans Mono', monospace;
-            margin: 0;
-            padding: 0;
-            background-color: white;
-            color: black;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .typewriter {
-            font-size: 4em;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .typewriter1 h1 {
-            overflow: hidden;
-            border-right: .15em solid black;
-            white-space: nowrap;
-            margin: 0;
-            letter-spacing: .15em;
-            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: black; }
-        }
-        .typewriter2 h1 {
-            overflow: hidden;
-            border-right: .15em solid black;
-            white-space: nowrap;
-            margin: 0;
-            letter-spacing: .15em;
-            animation: typing 5s steps(40, end), blink-caret .75s step-end infinite;
-        }
-
-        @keyframes typing {
-            from { width: 0 }
-            to { width: 100% }
-        }
-
-        @keyframes blink-caret {
-            from, to { border-color: transparent }
-            50% { border-color: black; }
-        }
-
-        .content {
-            margin-top: 50px;
-        }
-
-        .content p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .slogan {
-            font-style: italic;
-            font-size: 1.5em;
-            margin: 30px 0;
-        }
-
-        .resume {
-            margin-top: 50px;
-        }
-
-        .resume h2 {
-            border-bottom: 1px solid black;
-            padding-bottom: 10px;
-        }
-    </style>
+    <title>Jonathan - Terminal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <div class="typewriter1">
-            <h1>Hello<br>
-        </div>
-        <div class="typewriter2">
-            <strong>World</strong>.</h1>
-        </div>
-
-        <div class="content">
-            <p> I'm Jon. <br> 
-
-            <p class="slogan"> I do Computer Science + Business Technology @ the Courant Insititute. <br>
-                I pursue impactful applications and adaptations of technology and research in business contexts. <br>
-                I am passionate about the opportunities at intersection of business and techonlogy.</p>
-            <h3> And now - even more about me :) </h3>
-
-
-        </div>
-
-        <div class="resume">
-            <h2>Sample Resume</h2>
-            <h3>John Doe</h3>
-            <p>Computer Scientist & Business Technologist</p>
-            <h4>Experience</h4>
-            <ul>
-                <li>Senior Software Engineer, TechCorp (2018-present)</li>
-                <li>Data Scientist, AnalyticsPro (2015-2018)</li>
-                <li>Business Intelligence Analyst, DataDriven Inc. (2013-2015)</li>
-            </ul>
-            <h4>Education</h4>
-            <ul>
-                <li>M.S. Computer Science, Tech University (2013)</li>
-                <li>B.S. Business Administration, Business College (2011)</li>
-            </ul>
-            <h4>Skills</h4>
-            <p>Python, Java, Machine Learning, Data Analysis, Cloud Computing, Agile Methodologies</p>
+    <!-- Stock Ticker Bar -->
+    <div class="ticker-container">
+        <div class="ticker-content" id="ticker">
+            <span class="ticker-item">CS.SURFRANK <span class="up">↑ 2.5%</span></span>
+            <span class="ticker-item">ｖａｐｏｒｗａｖｅ　ク ピ <span class="up">↑ 130.0%</span></span>
+            <span class="ticker-item">HAPPINESS <span class="up">↑ 15.2%</span></span>
+            <span class="ticker-item">VIBES.VIBES.VIBES <span class="up">↑ 847.3%</span></span>
+            <span class="ticker-item">PINEAPPLES <span class="down">↓ 0.1%</span></span>
+            <span class="ticker-item">BANKING <span class="up">↑ 100.0%</span></span>
+            <span class="ticker-item">GPA<span class="up">↑ 3.85%</span></span>
+            <span class="ticker-item">GHOST.IN.THE.MACHINE <span class="up">↑ 42.0%</span></span>
+            <span class="ticker-item">STARTUP.VIB <span class="up">↑ 23.7%</span></span>
+            <span class="ticker-item">ML.RESEARCH <span class="up">↑ 67.8%</span></span>
+            <span class="ticker-item">STRESS.LVL <span class="down">↓ 12.4%</span></span>
+            <span class="ticker-item">FINSPLAINING <span class="down">↓ 5.9%</span></span>
+            <span class="ticker-item">ｒｅｔｒｏ æｓｔｈｅｔｉｃｓ　（ゆソゃ） <span class="up">↑ 234.1%</span></span>
+            <span class="ticker-item">QUACKERS<span class="up">↑ 89.3%</span></span>
+            <span class="ticker-item">INSTA.REELS.VIBES <span class="up">↑ 420.69%</span></span>
+            <span class ="ticker-item">UWU<span class = "up"> ↑ 30.0%</span>
+            <span class="ticker-item">商业组织 <span class="up">↑ 420.69%</span></span>
+            <span class="ticker-item">CUTTING.EDGE.TECH <span class="up">↑ 95.0%</span></span>
+            <span class="ticker-item">NETWORKING.PRO <span class="up">↑ 130.0%</span></span>
+            <span class="ticker-item">松鼠鳜鱼 <span class = "up">↑ 70.0%</span></span>
         </div>
     </div>
+
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="buttons">
+                <span class="btn close"></span>
+                <span class="btn minimize"></span>
+                <span class="btn maximize"></span>
+            </div>
+            <div class="title">jonathan@portfolio:~$</div>
+        </div>
+
+        <div class="terminal-body" id="terminal">
+            <div class="ascii-art">
+     ██╗ ██████╗ ███╗   ██╗ █████╗ ████████╗██╗  ██╗ █████╗ ███╗   ██╗
+     ██║██╔═══██╗████╗  ██║██╔══██╗╚══██╔══╝██║  ██║██╔══██╗████╗  ██║
+     ██║██║   ██║██╔██╗ ██║███████║   ██║   ███████║███████║██╔██╗ ██║
+██   ██║██║   ██║██║╚██╗██║██╔══██║   ██║   ██╔══██║██╔══██║██║╚██╗██║
+╚█████╔╝╚██████╔╝██║ ╚████║██║  ██║   ██║   ██║  ██║██║  ██║██║ ╚████║
+ ╚════╝  ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝
+            </div>
+
+            <div class="output" id="output">
+                <div class="line">
+                    <span class="prompt">jonathan@portfolio:~$</span> whoami
+                </div>
+                <div class="response">
+                    Jonathan - CS & Business Student at NYU Stern & Courant<br>
+                    Former JP Morgan Summer Analyst | Researcher | Entrepreneur<br>
+                    <span class="comment">// Loading personality... 🤖</span>
+                </div>
+                <div class="line">
+                    <span class="prompt">jonathan@portfolio:~$</span> echo "Welcome to my terminal!"
+                </div>
+                <div class="response">
+                    Welcome to my terminal!<br>
+                    <span class="comment">// Type 'help' to see available commands</span><br>
+                    <span class="comment">// This terminal has a mind of its own... 😄</span>
+                </div>
+            </div>
+
+            <div class="input-line">
+                <span class="prompt">jonathan@portfolio:~$</span>
+                <input type="text" id="command-input" autofocus>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
